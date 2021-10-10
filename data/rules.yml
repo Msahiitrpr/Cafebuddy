@@ -1,0 +1,55 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+#  - action: utter_fallback
+  - action: action_nlu_fallback
+
+
+#- rule: place_order
+#  steps:
+#    - intent: order_food
+#    - action: utter_ask_for_order
+#    - action: order_food_form
+#    - active_loop: order_food_form
+
+
+#- rule: placed_food ka rasta
+#  steps:
+#    - intent: placed_food
+#    - action: action_order_preview
+#    - intent: deny
+#    - action: utter_print_final_order
+#
+
+
+
+#- rule: Submit Food order
+#  condition:
+#    # Condition that form is active.
+#  - active_loop: order_food_form
+#  steps:
+#    # Form is deactivated
+#    - action: order_food_form
+#    - active_loop: null
+#    - slot_was_set:
+#        - food_item: null
+#    # The actions we want to run when the form is submitted.
+#    - action: action_submit_order
+#    - action: action_reset_slot
+#   # - action: action_session_start

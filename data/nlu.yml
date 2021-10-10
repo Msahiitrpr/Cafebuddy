@@ -1,0 +1,295 @@
+version: "2.0"
+nlu:
+#- intent: greet
+#  examples: |
+#    - hey
+#    - hello
+#    - hi
+#    - hello there
+#    - good morning
+#    - good evening
+#    - moin
+#    - hey there
+#    - let's go
+#    - hey dude
+#    - goodmorning
+#    - goodevening
+#    - good afternoon
+#    - goodafternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - see you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - great
+    - perfect
+    - sounds good
+    - sounds great
+    - Its looking fine
+    - Its fine
+    - yep
+    - yups
+- intent: deny
+  examples: |
+    - no
+    - no its fine
+    - its fine
+    - it is ok
+    - its okay
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No
+#- intent: mood_great
+#  examples: |
+#    - perfect
+#    - great
+#    - amazing
+#    - feeling like a king
+#    - wonderful
+#    - I am feeling very good
+#    - I am great
+#    - I am amazing
+#    - I am going to save the world
+#    - super stoked
+#    - extremely good
+#    - so so perfect
+#    - so good
+#    - so perfect
+#    - I am fine
+#    - Iam feeling great
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+#- intent: hello_world
+#  examples: |
+#    - Hello world
+#    - programming
+#    - first code
+#    - beginner programming
+
+- intent: order_food
+  examples: |
+    - I want to order food
+    - i want to eat snacks
+    - I want to have some food
+    - I wish to have breakfast
+    - order my lunch
+    - i would like to take dinner
+    - Order food
+    - I am hungry
+    - I want some snacks
+    - Something refreshing
+    - healthy food
+
+- intent: placed_food
+  examples: |
+    - i want to eat [pizza](food_item)
+    - [pizza](food_item)
+    - [Burger](food_item)
+    - some [cold coffee](food_item)
+    - do you have some [pasta](food_item)
+    - do you have some [burger and coke](food_item)
+    - is [biryani](food_item) available
+    - [boiled eggs](food_item)
+    - can please give me some [sushi](food_item)
+    - i would like to have [tea](food_item)
+    - I will have a medium [tea](food_item), please.
+    - [Sandwich](food_item)
+    - I would like to have [coffee](food_item)
+    - I would like to have some [eggs](food_item)
+    - I would like to have [pizza](food_item)
+    - i want some [Sukiyaki](food_item)
+    - i want to have  some [Butterchicken](food_item)
+    - i want some [Noodles](food_item)
+    - i woule like to have [Tempura](food_item)
+    - i want eat [Onigiri](food_item)
+    - i would take [Coffee](food_item)
+    - i want some [Lassi](food_item)
+    - i need some [Poha](food_item)
+    - bring me [Sashimi](food_item)
+    - order me [Unagi](food_item)
+    - i need some [Soba](food_item)
+    - order me [Yakitori](food_item)
+    - bring me [Sukiyaki](food_item)
+    - do you have some [Oden](food_item)
+    - can please give me some [MisoSoup](food_item)
+    - i would like to have [Barfi](food_item)
+    - bring me [Jalebi](food_item)
+    - order me [Kheer](food_item)
+    - i need some [Soba](food_item)
+    - order me [Pani puri](food_item)
+    - bring me [Idli](food_item)
+    - do you have some [Momo](food_item)
+    - can please give me some [Icecream](food_item)
+    - i would like to have [Pastry(food_item)
+    - I would like to have [Donut](food_item)
+    - i want some [Coffee](food_item)
+    - i want to have  some [Expresso](food_item)
+
+- intent: ask_id
+  examples: |
+    - tell me the conversation id
+    - what's my conversation id
+    - tell me session id
+    - may i know what is my session id
+    - What is the ID of this conversation?
+
+#- intent: food_enquiry?
+#  examples: |
+
+- intent : show_menu
+  examples: |
+    - can you show me menu
+    - menu please
+    - menu
+    - show me menu
+    - i want the menu
+    - what is available in cafe
+    - what food is available
+    - can you tell me the menu ?
+    - Can I have the menu ?
+    - Today's menu
+    - available food
+    - Excuse me, can I have the menu?
+
+
+- intent : show_cuisine
+  examples: |
+    - i want to eat try [indian](cuisine_type) cuisine
+    - [indian](cuisine_type) cuisine
+    - [india](cuisine_type) cuisine
+    - [japanese](cuisine_type) cuisine
+    - [India](cuisine_type) food
+    - [japanese](cuisine_type) food
+    - [japan](cuisine_type) food
+    - I want to try [Indian](cuisine_type) today
+    - I want to eat [Indian](cuisine_type) food today
+    - would like to eat [Japanese](cuisine_type) food today
+    - would like to eat [Japan](cuisine_type) food today
+    - I would like to eat [Indian](cuisine_type) food today
+    - can you suggest some [Indian](cuisine_type) food
+    - can you suggest some [Japanese](cuisine_type) food
+    - [Japan](cuisine_type) food
+
+- intent: ask_cuisine
+  examples: |
+   - what are available cuisines
+   - what are available cuisine
+   - what kind of cuisines food
+   - what kind of cuisine food
+   - different cuisines available
+   - can you show me available cuisine
+   - can you show me available cuisines
+   - kind of cuisine do you serve
+
+- intent: delete_item
+  examples: |
+    - i do not want Pizza
+    - i dont want pizza
+    - delete pizza
+    - remove pizza
+    - drop burger from my order
+    - remove pasta
+    - i dont need burger
+    - i do not want pasta
+    - no need of pasta
+
+
+
+
+- lookup: food_item
+  examples: |
+    - Sushi
+    - Sashimi
+    - Unagi
+    - Tempura
+    - Soba
+    - Udon
+    - Onigiri
+    - Yakitori
+    - Sukiyaki
+    - Oden
+    - MisoSoup
+    - Samosa
+    - VadaPav
+    - Dal
+    - Lassi
+    - GulabJamun
+    - Barfi
+    - Dosa
+    - MatarPaneer
+    - Butterchicken
+    - Poha
+    - Jalebi
+    - Kheer
+    - Panipuri
+    - Idli
+    - Burger
+    - Pizza
+    - Noodles
+    - Pasta
+    - Sandwich
+    - Momo
+    - Icecream
+    - Pastry
+    - Donut
+    - Coffee
+    - Shake
+    - Expresso
+
+# rasa run --endpoints endpoints.yml --port 5005 --credentials credentials.yml --cors "*"
+
+
+
+
+
+
+
+
+
+
+

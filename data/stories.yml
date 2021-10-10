@@ -1,0 +1,125 @@
+version: "2.0"
+
+stories:
+#
+#- story: happy path
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+
+#
+#- story: hello_world_path
+#  steps:
+#  - intent: hello_world
+#  - action: action_hello_world
+
+
+- story: placed_food_path_affirm
+  steps:
+  - intent: placed_food   # ek function banenge jisme menu ka ek list hoga usko comparekrebge agar mile to action order preview krwnege do you need anything else
+  - action: action_order_preview
+  - intent: affirm
+  - action: utter_ask_for_order
+
+
+- story: placed_food_path
+  steps:
+  - intent: placed_food
+  - action: action_order_preview
+  - intent: deny
+  - action: action_submit_order
+  - action: action_reset_slot
+
+
+- story: no_wala_path
+  steps:
+  - intent: deny
+  - action: action_nlu_fallback
+
+
+#- story: if_affirm
+#  steps:
+#  - checkpoint: check_for_ans
+#  - intent: affirm
+#  - action: utter_ask_for_order
+#  - intent: placed_food
+#  - action: action_order_preview
+#  - checkpoint: check_for_ans
+#
+#
+#- story: if_denied
+#  steps:
+#  - checkpoint: check_for_ans
+#  - intent: deny
+#  - action: utter_order_placed
+#  - action: action_submit_order
+#  - action: action_reset_slot
+
+- story: place_order
+  steps:
+    - intent: order_food
+    - action: utter_ask_for_order
+
+ # - action: action_session_start
+
+
+- story: session_id_path
+  steps:
+    - intent: ask_id
+    - action: action_session_id
+
+
+- story: show_menu
+  steps:
+    - intent: show_menu
+    - action: action_show_menu
+    - action: utter_ask_for_order
+
+- story: show_cuisine_path
+  steps:
+    - intent: show_cuisine
+    - action: action_show_menu
+    - action: utter_ask_for_order
+    - action: action_reset_slot
+
+- story: show_avail_cuisine
+  steps:
+    - intent: ask_cuisine
+    - action: action_show_cuisine
+
+
+- story: delete_item_path
+  steps:
+    - intent: delete_item
+    - action: utter_delete_item #action banan h delete ka
+    - action: action_reset_slot
+    - intent: deny
+    - action: action_submit_order
+    - action: action_reset_slot
+
+- story: delete_item_path1
+  steps:
+    - intent: delete_item
+    - action: utter_delete_item #action banan h delete ka
+    - action: action_reset_slot
+    - intent: affirm
+    - action: utter_ask_for_order
+#1
+#- story: placed_food_path
+#  steps:
+#  - intent: placed_food
+#  - action: action_order_preview
+#  - intent: affirm
+#  - action: utter_take_order_again
+#  - action: action_reset_slot
+
+#2
+
+
+#- story: order_food_path
+#  steps:
+#  - intent: order_food
+#  - action: action_order_food
+

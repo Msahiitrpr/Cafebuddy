@@ -1,0 +1,50 @@
+[
+  {
+    "text": "great",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5200319886207581
+    }
+  },
+  {
+    "text": "perfect",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.6600450277328491
+    }
+  },
+  {
+    "text": "no its fine",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9878091216087341
+    }
+  },
+  {
+    "text": "its fine",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.998977780342102
+    }
+  },
+  {
+    "text": "it is ok",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.985909640789032
+    }
+  },
+  {
+    "text": "its okay",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9992229342460632
+    }
+  }
+]

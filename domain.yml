@@ -1,0 +1,112 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+intents:
+#- mood_great
+- placed_food
+- deny
+#- greet
+- order_food
+- goodbye
+- affirm
+- mood_unhappy
+- bot_challenge
+#- hello_world
+- ask_id
+- show_menu
+- show_cuisine
+- ask_cuisine
+- delete_item
+- nlu_fallback
+
+config:
+  store_entities_as_slots: true
+
+entities:
+  - food_item
+  - cuisine_type
+
+
+
+
+slots:
+  food_item:
+    type: text
+    auto_fill: true
+    influence_conversation: false
+
+  cuisine_type:
+    type: text
+    auto_fill: true
+    influence_conversation: false
+
+
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a your cafebuddy.
+  utter_ask_for_order:
+  - text: Please tell us, What do you want to eat?
+  - text: What would you like to order today?
+  - text: What would you like to have today?
+  - text: Please tell us your choice.
+  utter_order_placed:
+  - text: 'Thanks for placing order your order is as follows :'
+  utter_temp_order:
+  - text: Thank you for selecting {food_item} . Do you need anything else ?
+  utter_print_final_order:
+  - text: 'Thanks for placing order your order is as follows : {food_item}'
+  utter_show_menu:
+  - text: "Please have a look at today's menu"
+  utter_list_cuisine_line:
+    - text: 'Thank you for asking, here are the available cuisines: '
+  utter_delete_item:
+    - text: "this item has been deleted"
+  utter_fallback:
+    - text: "Ab Blender aayega na bhidu"
+  utter_select_from_menu:
+    - text: "This item is not available, Please select from the Menu"
+    - text: "Sorry ,currently this item is not available in our cafe. Please have a look at our menu"
+
+
+
+actions:
+#- action_hello_world
+- action_order_food
+- action_order_preview
+- action_reset_slot
+- action_submit_order
+- utter_ask_for_order
+- utter_print_final_order
+- action_session_id
+- action_show_menu
+- action_show_cuisine
+- action_nlu_fallback
+#- validate_order_food_form
+#- action_session_start
+
+#forms:
+#  order_food_form:
+#    required_slots:
+#      food_item:
+#      - type: from_entity
+#        entity: food_item
+
+
+#intents:
+#- ask_id:
+#triggers: action_session_id
+#actions:
+#- action_session_id

@@ -1,0 +1,37 @@
+Sushi
+Sashimi
+Unagi
+Tempura
+Soba
+Udon
+Onigiri
+Yakitori
+Sukiyaki
+Oden
+Miso Soup
+Samosa
+Vada Pav
+Dal
+Lassi
+Gulab Jamun
+Barfi
+Dosa
+Matar Paneer
+Butter chicken
+Poha
+Jalebi
+Kheer
+Pani puri
+Idli
+Burger
+Pizza
+Noodles
+Pasta
+Sandwich
+Momo
+Icecream
+Pastry
+Donut
+Coffee
+Shake
+Expresso

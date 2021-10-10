@@ -1,0 +1,52 @@
+mysql -u root -p
+
+show databases;
+
+use trial_db;
+
+CREATE TABLE menu ( food VARCHAR(255), Cuisine VARCHAR(255));
+create table orders (id VARCHAR(255) , order_name VARCHAR(255));
+
+
+
+insert into menu values ("sushi","japanese");
+insert into menu values ("sashimi","japanese");
+insert into menu values ("unagi","japanese");
+insert into menu values ("tempura","japanese");
+insert into menu values ("soba","japanese");
+insert into menu values ("udon","japanese");
+insert into menu values ("onigiri","japanese");
+insert into menu values ("yakitori","japanese");
+insert into menu values ("sukiyaki","japanese");
+insert into menu values ("oden","japanese");
+insert into menu values ("miso soup","japanese");
+insert into menu values ("samosa","indian");
+insert into menu values ("vada pav","indian");
+insert into menu values ("dal","indian");
+insert into menu values ("lassi","indian");
+insert into menu values ("gulab jamun","indian");
+insert into menu values ("barfi","indian");
+insert into menu values ("dosa","indian");
+insert into menu values ("matar paneer","indian");
+insert into menu values ("butter chicken","indian");
+insert into menu values ("poha","indian");
+insert into menu values ("jalebi","indian");
+insert into menu values ("kheer","indian");
+insert into menu values ("pani puri","indian");
+insert into menu values ("idli","indian");
+insert into menu(food) values ("burger");
+insert into menu(food) values ("pizza");
+insert into menu(food) values ("noodles");
+insert into menu(food) values ("pasta");
+insert into menu(food) values ("sandwich");
+insert into menu(food) values ("momo");
+insert into menu(food) values ("icecream");
+insert into menu(food) values ("pastry");
+insert into menu(food) values ("donut");
+insert into menu(food) values ("coffee");
+insert into menu(food) values ("shake");
+insert into menu(food) values ("expresso");
+
+
+
+\
